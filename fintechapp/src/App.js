@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Profile from './components/comp_test';
+import { useState } from "react"; //state hook을 import
 
 function App() {
+
+  let username = "미입력";
+  let [usernameWithState, setUsernameWithState] = useState("초기값");
+  //[a,b] -> [데이터를 불러올 변수, a데이터를 바꿀 수 있는 메소드가 숨어있는? 상태]
+
+  const handleInputChange = (e) => {
+    //console.log(e.target.value); //입력될 데이터
+    //username = e.target.value;   //받아온 값을 username에 넣어줌
+    setUsernameWithState(e.target.value);
+    console.log(username);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <br></br><br></br>
+      <div>입력: <input onChange={handleInputChange}></input></div>
+      {/* 주석 처리: ctrl+/ */}
+      {/* <Profile username="윤주" grade="4"></Profile>  */}
+      <h4>{usernameWithState}</h4>
     </div>
   );
+
 }
 
 export default App;
