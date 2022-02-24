@@ -1,5 +1,6 @@
-import Profile from './components/comp_test';
+import Profile from './components/Profile';
 import { useState } from "react"; //state hook을 import
+import ListComp from './components/ListComp';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       {/* 주석 처리: ctrl+/ */}
       {/* <Profile username="윤주" grade="4"></Profile>  */}
       <h4>{usernameWithState}</h4>
+      <ListComp></ListComp>
     </div>
   );
 
