@@ -1,6 +1,7 @@
 import Profile from './components/Profile';
 import { useState } from "react"; //state hook을 import
 import ListComp from './components/ListComp';
+import Header from './components/Header';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <div>
-      <br></br><br></br>
+      <Header title="settings" />
+      <br></br>
       <div>입력: <input onChange={handleInputChange}></input></div>
       {/* 주석 처리: ctrl+/ */}
       {/* <Profile username="윤주" grade="4"></Profile>  */}
