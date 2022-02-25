@@ -2,6 +2,12 @@ import Profile from './components/Profile';
 import { useState } from "react"; //state hook을 import
 import ListComp from './components/ListComp';
 import Header from './components/Header';
+import styled from 'styled-components';
+
+const WholeBlock = styled.div`
+    margin: 20px;
+    text-align: center;
+`;
 
 function App() {
 
@@ -20,11 +26,13 @@ function App() {
     <div>
       <Header title="settings" />
       <br></br>
-      <div>입력: <input onChange={handleInputChange}></input></div>
-      {/* 주석 처리: ctrl+/ */}
-      {/* <Profile username="윤주" grade="4"></Profile>  */}
-      <h4>{usernameWithState}</h4>
-      <ListComp></ListComp>
+      <WholeBlock>
+          <div>입력: <input onChange={handleInputChange}></input></div>
+          {/* 주석 처리: ctrl+/ */}
+          {/* <Profile username="윤주" grade="4"></Profile>  */}
+          <h4>{usernameWithState}</h4>
+          <ListComp></ListComp>
+      </WholeBlock>
     </div>
   );
 
