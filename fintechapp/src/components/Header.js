@@ -9,8 +9,8 @@ const HeaderBlock = styled.div`
   font-weight: bold;
 `;
 
-const Header = (props) => {
-    return <HeaderBlock>{props.title}</HeaderBlock>;
+const Header = ({title}) => {
+    return <HeaderBlock>{title}</HeaderBlock>;
 };
 
 export default Header;
